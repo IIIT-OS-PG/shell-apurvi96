@@ -1,0 +1,16 @@
+aa.txt
+app
+app.txt
+apurvi.txt
+ass
+as.txt
+BUILTIN.h
+copy.cpp
+EXECUTECD.h
+EXECUTECMD.h
+gh
+global.h
+OS-PG-Assignment-1.pdf
+shell
+shell.cpp
+ss

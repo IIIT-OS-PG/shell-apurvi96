@@ -1,0 +1,3 @@
+HOME=/home/apurvi
+USER=apurvi
+HOSTNAME=apurvi-Lenovo-U41-70
