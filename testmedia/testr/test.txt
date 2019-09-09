@@ -1,0 +1,13 @@
+aa.txt
+ADHAR.pdf
+aps
+ASSIGN2
+dd
+DISCRETE
+doc
+GATE SCHOLARSHIP DOCS
+GREP
+MATERIAL SHARED
+os
+PASSBOOK.pdf
+scripting

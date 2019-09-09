@@ -1,0 +1,20 @@
+ls
+ls -a -l
+cat shell.cpp
+history
+cat shell.cpp
+cat lk
+jk
+ls
+cd
+cat ap
+ls
+ls -a -l
+history
+c
+ls
+cd testmedia
+ls
+cd testr
+ls
+cd ..

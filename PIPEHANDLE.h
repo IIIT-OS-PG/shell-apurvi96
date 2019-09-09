@@ -23,7 +23,7 @@
 
 
 #define maxi 4096 
-#define clear() printf("\033[H\033[J") 
+#define clearscre() printf("\033[H\033[J") 
 
 using namespace std;
 

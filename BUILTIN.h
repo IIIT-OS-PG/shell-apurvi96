@@ -20,62 +20,11 @@
 
 
 #define maxi 4096 
-#define clear() printf("\033[H\033[J") 
+#define clearscre() printf("\033[H\033[J") 
 
 
 
 using namespace std;
-
-
-void execute_cd(char **buffer)
-{
-	
-	char pathdir[2000];
-	int len =strlen(HOME);
-	int i;
-	strcpy(pathdir,HOME);
-
-	if(buffer[1]==NULL)
-	{
-		chdir(HOME);
-		exit_status_child=0;
-	}
-
-	else if(strcmp(buffer[1],"~")==0)
-		chdir(HOME);
-
-
-	else if(buffer[1][0]=='~')
-	{
-		for( i=1 ; buffer[1][i]!='\0' ; i++ )
-        {
-            pathdir[i+len-1] = buffer[1][i];
-        }
-
-        pathdir[i+len-1]='\0';
-
-        if( chdir(pathdir) != 0 )
-        {
-
-            perror("Error");
-           exit_status_child=errno;
-        }
-
-        else
-		exit_status_child=0;
-	}
-
-	else if( chdir(buffer[1]) != 0)
-	{
-		 perror("Error");
-		  exit_status_child=errno;
-	}
-
-	else
-	exit_status_child=0;
-
-
-}
 
 
 void execute_echo(char **buffer)
@@ -144,6 +93,8 @@ void execute_echo(char **buffer)
 			exit_status_child=0;
 			return;
 		}
+
+		
 
 	}
 
@@ -227,26 +178,4 @@ void execute_echo(char **buffer)
 
 }
 
-
-int check_builtin(char **buffer)
-{
-	if(strcmp(buffer[0],"cd")==0)
-	{
-		
-			execute_cd(buffer);
-			return 1;
-		}
-
-	else if(strcmp(buffer[0],"echo")==0)
-	{
-		
-			execute_echo(buffer);
-			return 1;
-		}
-
-
-		else
-			return 0;
-
-}
 #endif

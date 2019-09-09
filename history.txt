@@ -1,0 +1,5 @@
+open song.mp3
+ls
+open myrc.txt
+open song.mp3
+exit
